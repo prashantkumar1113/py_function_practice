@@ -47,3 +47,22 @@ def pack(one, two, three):
 
 packed_items = pack("backpack", "hat", "sunscreen")
 print(packed_items)
+
+# A function called eat_lunch(). This function should accept a list of any length, 
+# and print out a series of strings that say "First I eat __" (the first element of the list), 
+# and "Next I eat ___" (for the following elements in the list). 
+# If the list is empty, print "My lunchbox is empty!". The function should not return anything.
+
+def eat_lunch(food):
+    count = 1
+    if len(food) == 0:
+        print("My lunchbox is empty!")
+    else:
+        for x in food:
+            if count == 1:
+                print(f"First I eat {x}")
+                count+=1
+            else:
+                print(f"Next I eat {x}")
+
+eat_lunch(["pizza", "banana"])
