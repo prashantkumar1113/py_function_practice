@@ -1,4 +1,7 @@
 # Write a Python function called max_num()to find the maximum of three numbers.
+import math
+
+
 def max_num(a, b, c):
     max = a
     num_list = [a, b, c]
@@ -35,3 +38,13 @@ print(num_within(10,2,5))
 # The function accepts the number n, the number of rows to print
 # Note : Pascal's triangle is an arithmetic and geometric figure first imagined by Blaise Pascal. 
 # Each number is the two numbers above it added together.
+# n!/k!(n−k)!
+
+def pascal(num_of_rows):
+    print_str = ""
+    for n in range(0, num_of_rows):
+        for k in range(0,n+1):
+            # print(f"i:{i}, j:{j}")
+            print(f"{math.comb(n,k)} ", end="")
+        print("")
+pascal(5)
